@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Window</class>
+ <widget class="QMainWindow" name="Window">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>479</width>
+    <height>583</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Audio</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="Ressources.qrc">
+    <normaloff>:/icons/icons/icon.ico</normaloff>:/icons/icons/icon.ico</iconset>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_5">
+      <item>
+       <widget class="QGraphicsView" name="visualizer">
+        <property name="minimumSize">
+         <size>
+          <width>260</width>
+          <height>200</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>260</width>
+          <height>200</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <item>
+           <widget class="QLCDNumber" name="lcd_min"/>
+          </item>
+          <item>
+           <widget class="QLCDNumber" name="lcd_Sec"/>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QLabel" name="txtTitleInfo">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Morceau Actuel :</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="txt_Title">
+          <property name="text">
+           <string>Aucun</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_4">
+          <item>
+           <widget class="QLabel" name="txt_DurationInfo">
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>Durée du morceau :</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="txt_Time">
+            <property name="font">
+             <font>
+              <pointsize>16</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>00:00</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QSlider" name="timeline">
+      <property name="pageStep">
+       <number>1</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="tickPosition">
+       <enum>QSlider::NoTicks</enum>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <spacer name="horizontalSpacer_3">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btn_Stop">
+        <property name="toolTip">
+         <string>Arrêter la lecture</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="Ressources.qrc">
+          <normaloff>:/icons/icons/stop.png</normaloff>:/icons/icons/stop.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>32</width>
+          <height>32</height>
+         </size>
+        </property>
+        <property name="flat">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btn_Previous">
+        <property name="toolTip">
+         <string>Fichier précédent</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="Ressources.qrc">
+          <normaloff>:/icons/icons/previous.png</normaloff>:/icons/icons/previous.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>32</width>
+          <height>32</height>
+         </size>
+        </property>
+        <property name="flat">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btn_PlayPause">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="toolTip">
+         <string>Jouer</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="Ressources.qrc">
+          <normaloff>:/icons/icons/play.png</normaloff>:/icons/icons/play.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>32</width>
+          <height>32</height>
+         </size>
+        </property>
+        <property name="flat">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btn_Next">
+        <property name="toolTip">
+         <string>Fichier Suivant</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="Ressources.qrc">
+          <normaloff>:/icons/icons/next.png</normaloff>:/icons/icons/next.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>32</width>
+          <height>32</height>
+         </size>
+        </property>
+        <property name="flat">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btn_Mode">
+        <property name="toolTip">
+         <string>Lecture séquentielle</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="Ressources.qrc">
+          <normaloff>:/icons/icons/sequential.png</normaloff>:/icons/icons/sequential.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>32</width>
+          <height>32</height>
+         </size>
+        </property>
+        <property name="flat">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_4">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QListView" name="playList">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>192</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btn_AddFile">
+        <property name="toolTip">
+         <string>Ajouter un fichier</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="Ressources.qrc">
+          <normaloff>:/icons/icons/add.png</normaloff>:/icons/icons/add.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>32</width>
+          <height>32</height>
+         </size>
+        </property>
+        <property name="flat">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btn_PlayCurrent">
+        <property name="toolTip">
+         <string>Jouer le morceau sélectionné</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="Ressources.qrc">
+          <normaloff>:/icons/icons/play.png</normaloff>:/icons/icons/play.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>32</width>
+          <height>32</height>
+         </size>
+        </property>
+        <property name="flat">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btn_RemoveFile">
+        <property name="toolTip">
+         <string>Retirer ce fichier</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="Ressources.qrc">
+          <normaloff>:/icons/icons/remove.png</normaloff>:/icons/icons/remove.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>32</width>
+          <height>32</height>
+         </size>
+        </property>
+        <property name="flat">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btn_EmptyList">
+        <property name="toolTip">
+         <string>Vider la liste de lecture</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="Ressources.qrc">
+          <normaloff>:/icons/icons/empty.png</normaloff>:/icons/icons/empty.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>32</width>
+          <height>32</height>
+         </size>
+        </property>
+        <property name="flat">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>479</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFichier">
+    <property name="title">
+     <string>Fichier</string>
+    </property>
+    <addaction name="act_AddFile"/>
+   </widget>
+   <widget class="QMenu" name="menuLecture">
+    <property name="title">
+     <string>Lecture</string>
+    </property>
+    <widget class="QMenu" name="menuMode_de_lecture">
+     <property name="title">
+      <string>Mode de lecture</string>
+     </property>
+     <addaction name="act_Random"/>
+     <addaction name="act_Sequence"/>
+     <addaction name="act_RepeatAll"/>
+     <addaction name="act_Loop"/>
+    </widget>
+    <addaction name="act_PlayPause"/>
+    <addaction name="act_Previous"/>
+    <addaction name="act_Next"/>
+    <addaction name="act_Stop"/>
+    <addaction name="menuMode_de_lecture"/>
+   </widget>
+   <widget class="QMenu" name="menuAide">
+    <property name="title">
+     <string>Aide</string>
+    </property>
+    <addaction name="act_About"/>
+    <addaction name="act_QAbout"/>
+   </widget>
+   <addaction name="menuFichier"/>
+   <addaction name="menuLecture"/>
+   <addaction name="menuAide"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="act_About">
+   <property name="text">
+    <string>A propos de Audio ...</string>
+   </property>
+  </action>
+  <action name="act_AddFile">
+   <property name="text">
+    <string>Ouvrir un fichier</string>
+   </property>
+  </action>
+  <action name="act_PlayPause">
+   <property name="text">
+    <string>Jouer</string>
+   </property>
+   <property name="toolTip">
+    <string>Lancer la lecture</string>
+   </property>
+  </action>
+  <action name="act_Previous">
+   <property name="text">
+    <string>Précédent</string>
+   </property>
+  </action>
+  <action name="act_Next">
+   <property name="text">
+    <string>Suivant</string>
+   </property>
+  </action>
+  <action name="act_Stop">
+   <property name="text">
+    <string>Arrêter</string>
+   </property>
+  </action>
+  <action name="act_Random">
+   <property name="text">
+    <string>Aléatoire</string>
+   </property>
+  </action>
+  <action name="act_Sequence">
+   <property name="text">
+    <string>Séquence</string>
+   </property>
+  </action>
+  <action name="act_RepeatAll">
+   <property name="text">
+    <string>Répéter Tout</string>
+   </property>
+  </action>
+  <action name="act_QAbout">
+   <property name="text">
+    <string>A propos de Qt ...</string>
+   </property>
+  </action>
+  <action name="act_Loop">
+   <property name="text">
+    <string>Lire en boucle</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="Ressources.qrc"/>
+ </resources>
+ <connections/>
+</ui>
