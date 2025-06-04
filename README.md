@@ -1,7 +1,7 @@
 # Lecteur-Audio
 Simple Lecteur de musiques.
 
-#Très important
+# Très important
 
 Les fichiers "SDL3.dll" et "SDL3_mixer.dll" disponibles
 dans le dossier"bin" doivent être
